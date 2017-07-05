@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Twitch JSON API</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+</head>
+<body>
+	<div class="container">
+		<div id="resultsList">
+			<div class="resultsList-navigation">
+				<ul class="navigation-list">
+					<li class="navigation all active">
+						All
+						<span data-name="border" class="bottom-border active"></span>
+					</li>
+					<li class="navigation live">
+						Live
+						<span data-name="border" class="bottom-border"></span>
+					</li>
+					<li class="navigation offline">
+						Offline
+						<span data-name="border" class="bottom-border"></span>
+					</li>
+				</ul>
+			</div>
+			<div class="suggestion-box">
+				<input type="text" id="filterResults" placeholder="Filter results">
+				<div class="suggestions">
+					<ul class="suggestions-list">
+						
+					</ul>
+				</div>
+			</div>
+			<div class="resultsList-wrapper">
+				<ul class="channels">
+					<li class="initial-message">Getting data...</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<script src="bundle.js"></script>
+</body>
+</html>

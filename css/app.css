@@ -1,0 +1,278 @@
+body {
+	height: 100vh;
+	background-color: #1D3E53;
+	padding: 50px 0;
+}
+
+/* Links */
+
+a, a:hover, a:visited, a:focus, a:active {
+	text-decoration: none;
+}
+
+#resultsList {
+	background-color: #fff;
+	border-radius: 3px;
+	width: 80%;
+	margin: 0 auto 50px auto;
+	box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+}
+
+/* Navigation */
+
+.resultsList-navigation {
+	background-color: #254B62;
+}
+
+.navigation-list {
+	list-style-type: none;
+	display: flex;
+	justify-content: space-between;
+	padding-left: 0;
+}
+
+.navigation {
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    flex-direction: column;
+	text-align: center;
+	font-size: 1.2em;
+	color: #fff;
+	padding: 20px;
+}
+
+.navigation:hover {
+	cursor: pointer;
+}
+
+.bottom-border {
+	width: 100%;
+	height: 8px;
+	background-color: #e65a5a;
+	position: relative;
+	top: 20px;
+    transform: scaleX(0);  
+    transition: transform 250ms ease-in-out;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+}
+
+.active {
+	transform: scaleX(1);	
+}
+
+.resultsList-wrapper {
+	padding: 15px;
+}
+
+#filterResults {
+	width: 100%;
+	display: block;
+	margin: 40px auto 0 auto;
+	border: none;
+	background-color: #ededed;
+	padding: 20px 10px;
+	border-radius: 3px;
+	transition: all 0.8s ease;
+	border-bottom: 3px solid #ededed;
+}
+
+#filterResults:focus {
+	outline: none;
+	border-bottom: 3px solid #e65a5a;
+}
+
+.suggestion-box {
+	width: 80%;
+	position: relative;
+	display: block;
+	margin: 0 auto;
+}
+
+.suggestions {
+	width: 100%;
+	position:absolute;
+	background-color: #fff;
+	box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+	border-radius: 3px;
+}
+
+.suggestions-list {
+	display: none;
+	padding-left: 0;
+	list-style-type: none;
+	margin-bottom: 0px;
+}
+
+.suggestions-list li {
+	padding: 15px 10px;
+	font-size: 1.1em;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    transition: all 0.4s ease;
+}
+
+.suggestion-logo {
+	width: 25px;
+	height: 25px;
+	border-radius: 100%;
+	margin-right: 10px;
+}
+
+.suggestions-list li:first-child {
+	padding-top: 15px;
+}
+
+.suggestions-list li:last-child {
+	border-bottom-left-radius: 3px;
+	border-bottom-right-radius: 3px;
+}
+
+.suggestions-list li:hover {
+	background-color: #254B62;
+	color: #fff;
+	cursor: pointer;
+}
+
+.active-suggestions {
+	display: block;
+}
+
+/* Channel styles */
+
+.channels {
+	list-style-type: none;
+	padding: 20px 40px;
+}
+
+.channel {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	margin: 30px 0;
+	transition: all 0.4s ease;
+}
+
+.channel img {
+	width: 70px;
+	height: 70px;
+	border-radius: 100%;
+}
+
+.info-panel {
+	display: flex;
+	flex-direction:column;
+	justify-content: left;
+	margin-right: auto;
+}
+
+.channel h3 {
+	padding: 0;
+	margin: 0 auto 0 20px;
+	color: #545655;
+}
+
+.channel-streaming-info {
+	color: #858886;
+	padding-top: 5px;
+	margin-left: 20px;
+}
+
+.initial-message {
+	text-align: center;
+	font-size: 2em;
+	color: #565656;
+}
+
+/* Status styles */
+
+.status,
+.suggestion-status {
+	width: 15px;
+	height: 15px;
+	border-radius: 100%;
+	margin-right: 20px;
+}
+
+.suggestion-status {
+	width: 10px;
+	height: 10px;
+	margin-left: auto;
+}
+
+.streaming {
+	background-color: #29d153;
+}
+
+.not-streaming {
+	background-color: #d60419;
+}
+
+/* Error styles */
+
+.error-message,
+.suggestions-error-message {
+	text-align: center;
+	color: #565656;
+}
+
+.suggestions-list li.suggestions-error-message {
+	padding: 20px;
+	font-size: 1.5em;
+}
+
+.suggestions-list li.suggestions-error-message:hover {
+	background-color: inherit;
+	color: inherit;
+}
+
+.error-button {
+	display: block;
+	margin: 40px auto;
+	padding: 15px 30px;
+	color: #fff;
+	border: none;
+	background-color: #e66000;
+	font-size: 1.1em;
+	border-radius: 3px;
+	transition: all 0.3s ease;
+}
+
+.error-button:hover {
+	box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+}
+
+.error-button:active, .error-button:focus {
+	outline: none;
+}
+
+@media (max-width: 650px) {
+	#resultsList {
+		width: 100%;
+	}
+
+	.channels {
+		padding: 10px;
+	}
+
+	.channel img {
+		width: 45px;
+		height: 45px;
+	}
+
+	.channel-name {
+		font-size: 1.4em;
+	}
+
+	.channel-streaming-info {
+		font-size: 0.9em;
+	}
+
+	.status {
+		height: 13px;
+		width: 13px;
+		margin-left: 15px;
+	}
+}
